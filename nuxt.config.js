@@ -51,6 +51,9 @@ export default {
   axios: {
     baseURL: 'https://nuxt-blog-kj.firebaseio.com'
   },
+  router: {
+    middleware: ['auth-cookie']
+  },
   /*
   ** Build configuration
   */
