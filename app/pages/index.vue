@@ -25,9 +25,8 @@ import { mapGetters, mapActions} from 'vuex'
 import Cookies from 'universal-cookie'
 
 export default {
-  asyncData(redirect,store) {
-    console.log('debug')
-    console.log(store)
+  asyncData({ redirect , store }) {
+    //console.log(store)
     if (store.getters['user']){
       redirect('/posts/')
     }
