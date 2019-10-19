@@ -37,7 +37,7 @@ export default {
   async asyncData({store}){
     await store.dispatch('posts/fetchPosts')
   },
-    computed: {
+  computed: {
         showPosts() {
             return this.posts.map(post => {
               post.created_at = moment(post.created_at).format('YYYY/MM/DD HH:mm:ss')

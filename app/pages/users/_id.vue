@@ -18,7 +18,8 @@
                     </div>
                     <el-table :data="userPosts"
                               style="width: 100%" class="table" >
-                              <el-table-column prop="created_at" label="投稿日時 " width="160" />
+                              <el-table-column prop="title" label="タイトル" ></el-table-column>
+                              <el-table-column prop="created_at" label="投稿日時 " width="160" ></el-table-column>
                     </el-table>
                 </el-card>
             </el-col>
@@ -47,7 +48,7 @@ export default {
             })
         },
         user() {
-            const user = this.users.find(u => u.id === this.route.params.id )
+            const user = this.users.find(u => u.id === this.$route.params.id )
             if (!user) return null
             return Object.assign({posts: []}, user)
         },
