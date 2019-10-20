@@ -7,6 +7,7 @@
                     <small>by {{post.user.id}}</small>
                 </div>
                 <p>{{post.body}}</p>
+                <no-ssr>
                 <p class="text-right">
                     <el-button :disabled="!isLoggedIn" type="warning" v-if="isLiked"
                         @click="unlike" round>
@@ -18,6 +19,7 @@
                         <span> {{post.likes.lenght}} </span>
                     </el-button>
                 </p>
+                </no-ssr>
                 <p class="text-ringht">
                     {{post.created_at | time}}
                     </p>
